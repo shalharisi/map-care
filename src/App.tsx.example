@@ -1,0 +1,25 @@
+import React from 'react';
+import { AIAssistantProvider, AIAssistantChat } from '@/components/AIAssistant';
+import { Toaster } from 'sonner';
+
+/**
+ * Root App Component with AI Assistant Integration
+ * المساعد الذكي متاح في جميع الصفحات
+ */
+function App() {
+  return (
+    <AIAssistantProvider>
+      <div className="min-h-screen bg-gray-50 dir-rtl">
+        {/* Your existing app routes and layout */}
+        
+        {/* AI Assistant Chat Widget - يظهر في جميع الصفحات */}
+        <AIAssistantChat />
+        
+        {/* Toast Notifications */}
+        <Toaster position="top-center" />
+      </div>
+    </AIAssistantProvider>
+  );
+}
+
+export default App;
